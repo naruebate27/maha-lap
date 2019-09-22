@@ -1,10 +1,10 @@
 const MahaLap = require("./maha-lap");
 
 describe("Test Maha-Lap", () => {
-  test("Test Tamnai with อาทิตย์", () => {
-    const result = MahaLap.tamnaiWithDay("อาทิตย์");
-    expect(result).toEqual(1);
-  });
+//   test("Test Tamnai with อาทิตย์", () => {
+//     const result = MahaLap.tamnaiWithDay("อาทิตย์");
+//     expect(result).toEqual(1);
+//   });
 
 //   test("Test Tamnai with จันทร์", () => {
 //     const result = MahaLap.tamnaiWithDay("จันทร์");
@@ -50,4 +50,12 @@ describe("Test Maha-Lap", () => {
 //     const result = MahaLap.tamnaiWithDay("คริสมาสต์");
 //     expect(result).toEqual(25);
 //   });
+
+  test("Test Tamnai with story", () => {
+    const result = MahaLap.tamnaiWithStory("งู");
+    expect(result).toEqual(3);
+  });
+
+  
+  
 });
