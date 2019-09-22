@@ -92,13 +92,13 @@ describe("Test Maha-Lap", () => {
 
     test("Test Namo with ฝัน วันเสาร์ ตอนกลางคืน เห็น วัว", () => {
         global.Math.random = jest.fn(() => 0.4);
-        const result = MahaLap.namo("เสาร์","วัว");
+        const result = MahaLap.namo("เสาร์","วัว","กลางคืน");
         expect(result).toEqual(134);
     });
 
     test("Test Namo with ฝัน วันสงกรานต์ ตอนกลางคืน เห็น พยานาค", () => {
         global.Math.random = jest.fn(() => 0.64);
-        const result = MahaLap.namo("สงกรานต์","พยานาค");
+        const result = MahaLap.namo("สงกรานต์","พยานาค","กลางคืน");
         expect(result).toEqual(345);
     });
 
