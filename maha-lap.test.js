@@ -1,7 +1,7 @@
 const MahaLap = require("./maha-lap");
 
 describe("Test Maha-Lap", () => {
-  test("Test Tamnai with day", () => {
+  test("Test Tamnai with อาทิตย์", () => {
     const result = MahaLap.tamnaiWithDay("อาทิตย์");
     expect(result).toEqual(1);
   });
