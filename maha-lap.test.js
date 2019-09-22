@@ -61,6 +61,11 @@ describe("Test Maha-Lap", () => {
         expect(result).toEqual(6);
     });
 
+    test("Test Tamnai with story", () => {
+        const result = MahaLap.tamnaiWithStory("พยานาค");
+        expect(result).toEqual(21);
+    });
+
     test("Test Tamnai with Time กลางวัน random = 0.98 return 0.98", () => {
         global.Math.random = jest.fn(() => 0.98);
         const result = MahaLap.tamnaiWithTime("กลางวัน");
@@ -73,7 +78,7 @@ describe("Test Maha-Lap", () => {
         expect(result).toEqual(0.5);
     });
 
-    test("Test Tamnai with Time กลางคืน random = 0.4 return 0.5", () => {
+    test("Test Tamnai with Time กลางคืน random = 0.4 return 0.4", () => {
         global.Math.random = jest.fn(() => 0.4);
         const result = MahaLap.tamnaiWithTime("กลางคืน");
         expect(result).toEqual(0.4);
@@ -83,6 +88,18 @@ describe("Test Maha-Lap", () => {
         global.Math.random = jest.fn(() => 0.64);
         const result = MahaLap.tamnaiWithTime("กลางคืน");
         expect(result).toEqual(0.5);
+    });
+
+    test("Test Namo with ฝัน วันเสาร์ ตอนกลางคืน เห็น วัว", () => {
+        global.Math.random = jest.fn(() => 0.4);
+        const result = MahaLap.namo("เสาร์","วัว");
+        expect(result).toEqual(134);
+    });
+
+    test("Test Namo with ฝัน วันสงกรานต์ ตอนกลางคืน เห็น พยานาค", () => {
+        global.Math.random = jest.fn(() => 0.64);
+        const result = MahaLap.namo("สงกรานต์","พยานาค");
+        expect(result).toEqual(345);
     });
 
 });
